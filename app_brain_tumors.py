@@ -26,8 +26,9 @@ with st.sidebar:
     <hr color=#ffcc00><br>
     <p style="font-size:110%;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
     As well as <b>a formidable challenge</b>.<br><br>
-    <b>Artificial Intelligence technologies</b> could revolutionize the medicine by providing efficient and relevant tools for innovative therapeutic approaches 
-    and improved personalized treatments.</p>""", height=470)
+    At Neurologs we are convinced that <b>Artificial Intelligence technologies</b> could revolutionize the medicine by providing efficient tools for innovative therapeutic approaches 
+    and improved personalized treatments.<br><br>
+    Discover our solutions for brain disorders diagnosis and treatment.</p>""", height=470)
 
         
 title = components.html("""<div><h1 style="color:#9CFF8B; font-size:210%; text-align:center"><b>Brain tumors classifier</b></h1></div>""", height=110)
