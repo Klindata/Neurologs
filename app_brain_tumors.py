@@ -32,7 +32,7 @@ with st.sidebar:
         
 title = components.html("""<div><h1 style="color:#9CFF8B; font-size:210%; text-align:center"><b>Brain tumors classifier</b></h1></div>""", height=110)
 
-image_app1 = Image.open("photo/photo_app1.jpg")                        
+image_app1 = Image.open("photo/image.jpg")                        
 st.image(image_app1, use_column_width=True)
 
 presentation = components.html("""<div style="color:white; font-size:108%"><br><p>We have designed a deep learning model (convolutional neural network) which can detect and classify 
