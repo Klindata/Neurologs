@@ -28,7 +28,7 @@ with st.sidebar:
     As well as <b>a formidable challenge</b>.<br><br>
     At Neurologs we are convinced that <b>Artificial Intelligence technologies</b> could revolutionize the medicine by providing efficient tools for innovative therapeutic approaches 
     and improved personalized treatments.<br><br>
-    Discover our solutions for brain disorders diagnosis and treatment.</p>""", height=470)
+    Discover our solutions for brain disorders diagnosis and treatment.</p>""", height=500)
 
         
 title = components.html("""<div><h1 style="color:#9CFF8B; font-size:210%; text-align:center"><b>Brain tumors classifier</b></h1></div>""", height=110)
