@@ -26,7 +26,7 @@ with st.sidebar:
     <hr color=#ffcc00><br>
     <p style="font-size:120%;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
     As well as <b>a formidable challenge</b>.<br><br>
-    <b>Artificial Intelligence technologies</b> could revolutionize the medicine by providing efficient tools and relevant solutions for innovative therapeutic approaches 
+    <b>Artificial Intelligence technologies</b> could revolutionize the medicine by providing efficient and relevant tools for innovative therapeutic approaches 
     and improved personalized treatments.</p>""", height=470)
 
         
