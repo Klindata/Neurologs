@@ -31,7 +31,7 @@ with st.sidebar:
     Discover our solutions for brain disorders diagnosis and treatment.</p>""", height=500)
 
         
-title = components.html("""<div><h1 style="color:#9CFF8B; font-size:210%; text-align:center"><b>Brain tumors classifier</b></h1></div>""", height=95)
+title = components.html("""<div><h1 style="color:#9CFF8B; font-size:230%; text-align:center"><b>Brain tumors classifier</b></h1></div>""", height=95)
 
 image_app1 = Image.open("photo/image.jpg")                        
 st.image(image_app1, use_column_width=True)
