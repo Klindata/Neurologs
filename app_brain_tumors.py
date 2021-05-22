@@ -36,8 +36,7 @@ title = components.html("""<div><h1 style="color:#9CFF8B; font-size:230%; text-a
 image_app1 = Image.open("photo/image.jpg")                        
 st.image(image_app1, use_column_width=True)
 
-st.write("We have designed a deep learning model (convolutional neural network) which can detect and classify 
-                               #the most common primary brain tumors: glioma, meningioma and pituitary tumors.")
+st.write("We have designed a deep learning model (convolutional neural network) which can detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.")
 
 st.write("The model has been trained with more than 3200 MRI scans images and predictions are correct 95% of the time.")
          
