@@ -23,7 +23,7 @@ def load_model_classifier():
 with st.sidebar:
     text_presentation = components.html(
     """<h1 style="color:#115764; font-size:230%"><b>NEUROLOGS</b><br></h1>
-    <hr color=#ffcc00><br>
+    <hr color=#ffcc00>
     <p style="font-size:110%;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
     As well as <b>a formidable challenge</b>.<br><br>
     At Neurologs we are convinced that <b>Artificial Intelligence technologies</b> could revolutionize the medicine by providing efficient tools for innovative therapeutic approaches 
