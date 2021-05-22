@@ -10,13 +10,13 @@ from keras.models import load_model
 
 @st.cache(allow_output_mutation=True)
 def load_model_is_mri():
-    model = load_model("C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\model_is_mri")
+    model = load_model("model_is_mri/saved_model.pb")
     model.make_predict_function()
     return model
 
 @st.cache(allow_output_mutation=True)
 def load_model_classifier():
-    model = load_model("C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\model_classifier_brain_tumors")
+    model = load_model("model_classifier_brain_tumors/saved_model.pb")
     model.make_predict_function()
     return model
 
