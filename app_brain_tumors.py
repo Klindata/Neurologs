@@ -30,7 +30,7 @@ with st.sidebar:
     and improved personalized treatments.</p>""", height=470)
 
         
-title = components.html("""<div><h1 style="color:#9CFF8B; font-size:210%; text-align:center"><b>Brain tumors classifier</b></h1></div>""", height=118)
+title = components.html("""<div><h1 style="color:#9CFF8B; font-size:210%; text-align:center"><b>Brain tumors classifier</b></h1></div>""", height=110)
 
 image_app1 = Image.open("photo/photo_app1.jpg")                        
 st.image(image_app1, use_column_width=True)
