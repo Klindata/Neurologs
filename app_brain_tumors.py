@@ -91,42 +91,43 @@ if uploaded_file is not None:
     
     if generate_pred:
         with col2:
-            verif = load_model_is_mri()
-            verif_ismri = verif.predict(test_image)
-            verif = np.argmax(verif_ismri)
-            if verif== 1:
-                components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200)
-            if verif == 0:
-                with st.spinner('Analysis in progress ......'):
-                    loaded_model = load_model_classifier()
-                    prediction = loaded_model.predict(test_image)
-                    prediction = np.argmax(prediction)
-                    if prediction == 0:
-                        components.html("""<div style="background-color:#99c5c2">
-                        <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
-                        <p style="background-color:#F63366; text-align:center; font-size:140%; color:white"><br><b>Tumor detected</b><br><br></p>
-                        <p style="text-align:center; font-size:140%; color:#115764">Classified as <span style="color:red"><b>glioma</b></span> tumor.</p>
-                        <br></div>""", height=450)
-                    elif prediction == 1:
-                        components.html("""<div style="background-color:#99c5c2">
-                        <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
-                        <p style="background-color:#F63366; text-align:center; font-size:140%; color:white"><br><b>Tumor detected</b><br><br></p>
-                        <p style="text-align:center; font-size:140%; color:#115764">Classified as <span style="color:navy"><b>meningioma</b></span> tumor.</p>
-                        <br></div>""", height=450)
-                    elif prediction ==2:
-                        components.html("""<div style="background-color:#99c5c2">
-                        <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
-                        <p style="background-color:#9CFF8B; text-align:center; font-size:140%; color:#115764"><br><b>There is no tumor.</b><br><br></p>
-                        <br><br></div>""", height=450)
-                    elif prediction == 3: 
-                        components.html("""<div style="background-color:#99c5c2">
-                        <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
-                        <p style="background-color:#F63366; text-align:center; font-size:140%; color:white"><br><b>Tumor detected</b><br><br></p>
-                        <p style="text-align:center; font-size:140%; color:#115764">Classified as <span style="color:green"><b>pituitary</b></span> tumor.</p>
-                        <br></div>""", height=450)
-                    else:
-                        st.write("Error. The algorithm failed to predict the outcome. Please try again")
+            with st.spinner('Analysis in progress ......'):
+                verif = load_model_is_mri()
+                verif_ismri = verif.predict(test_image)
+                verif = np.argmax(verif_ismri)
+                if verif== 1:
+                    components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
+                                            Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200)
+                if verif == 0:
+                    with st.spinner('Analysis in progress ......'):
+                        loaded_model = load_model_classifier()
+                        prediction = loaded_model.predict(test_image)
+                        prediction = np.argmax(prediction)
+                        if prediction == 0:
+                            components.html("""<div style="background-color:#99c5c2">
+                            <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
+                            <p style="background-color:#F63366; text-align:center; font-size:140%; color:white"><br><b>Tumor detected</b><br><br></p>
+                            <p style="text-align:center; font-size:140%; color:#115764">Classified as <span style="color:red"><b>glioma</b></span> tumor.</p>
+                            <br></div>""", height=450)
+                        elif prediction == 1:
+                            components.html("""<div style="background-color:#99c5c2">
+                            <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
+                            <p style="background-color:#F63366; text-align:center; font-size:140%; color:white"><br><b>Tumor detected</b><br><br></p>
+                            <p style="text-align:center; font-size:140%; color:#115764">Classified as <span style="color:navy"><b>meningioma</b></span> tumor.</p>
+                            <br></div>""", height=450)
+                        elif prediction ==2:
+                            components.html("""<div style="background-color:#99c5c2">
+                            <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
+                            <p style="background-color:#9CFF8B; text-align:center; font-size:140%; color:#115764"><br><b>There is no tumor.</b><br><br></p>
+                            <br><br></div>""", height=450)
+                        elif prediction == 3: 
+                            components.html("""<div style="background-color:#99c5c2">
+                            <p style="text-align:center; font-size:160%; color:#115764"><br><b>-- RESULT --</b></p>
+                            <p style="background-color:#F63366; text-align:center; font-size:140%; color:white"><br><b>Tumor detected</b><br><br></p>
+                            <p style="text-align:center; font-size:140%; color:#115764">Classified as <span style="color:green"><b>pituitary</b></span> tumor.</p>
+                            <br></div>""", height=450)
+                        else:
+                            st.write("Error. The algorithm failed to predict the outcome. Please try again")
                       
 
 
