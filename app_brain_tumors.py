@@ -82,17 +82,15 @@ if uploaded_file is not None:
         test_image = np.expand_dims(test_image, axis=0)
     
     if generate_pred:
-        with st.spinner('Analysis in progress ......'):
-            with col2:
-                verif = load_model_is_mri()
-                verif_ismri = verif.predict(test_image)
-                verif = np.argmax(verif_ismri)
-                if verif== 1:
-                    components.html("""<div><br>
-                                    <p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                                    Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p>
-                                    </div>""", height=200)
-                if verif == 0:
+        with col2:
+            verif = load_model_is_mri()
+            verif_ismri = verif.predict(test_image)
+            verif = np.argmax(verif_ismri)
+            if verif== 1:
+                components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
+                                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200)
+            if verif == 0:
+                with st.spinner('Analysis in progress ......'):
                     loaded_model = load_model_classifier()
                     prediction = loaded_model.predict(test_image)
                     prediction = np.argmax(prediction)
